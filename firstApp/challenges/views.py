@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+from django.template.loader import render_to_string
 
 # Create your views here.
 
@@ -22,21 +23,39 @@ monthly_challenges = {
     'december': 'Create a program that generates a random password of a given length.'
 }
 
+def index(request):
+    list_items = ""
+    months = list(monthly_challenges.keys())
+
+    for month in months:
+        capitalized_month = month.capitalize()
+        month_path = reverse("month-challenge", args=[month])
+
+        list_items += f"<li><a href=\"{month_path}\">{capitalized_month}</a> </li>"
+
+    #"<li><a href="...">January</a></li><a href="...">February</a></li>..."
+
+    response_data = f"<ul>{list_items}</ul>"
+    return HttpResponse(response_data)
+
 def monthly_challenge(request, month):
     try:
         challenge_text = monthly_challenges[month]
+        response_data = render_to_string("challenges/challenge.html")
+        #response_data = f"<h1>{challenge_text}<h1>"  #html 
+        return HttpResponse(response_data)
     except:
-        return HttpResponseNotFound("This month is not supported")
-    return HttpResponse(challenge_text)
+        return HttpResponseNotFound("<h1>This month is not supported<h1>")
+    
 
 
 def monthly_challenge_by_number(request, month):
     months = list(monthly_challenges.keys())
 
     if month > len(months):
-        return HttpResponseNotFound("Invalid Month")
+        return HttpResponseNotFound("Invalid Month") #404 response
 
-    redirect_month = months[month -1]
-    redirect_path = reverse("month-challenge", args=[redirect_month]) # /challenge/
+    redirect_month = months[month -1] #302 is for redirect
+    redirect_path = reverse("month-challenge", args=[redirect_month]) # /challenge/  the reverse works with the name path in the urls
 
     return HttpResponseRedirect(redirect_path)
