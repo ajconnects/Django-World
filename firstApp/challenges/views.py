@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import Http404, HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 from django.template.loader import render_to_string
 
@@ -20,32 +20,47 @@ monthly_challenges = {
     'september': 'Write a program to convert temperature from Celsius to Fahrenheit.',
     'october': 'Develop a program that counts the number of words in a text file.',
     'november': 'Build a basic Flask web application with a simple CRUD functionality.',
-    'december': 'Create a program that generates a random password of a given length.'
+    'december': None
+    #'december': 'Create a program that generates a random password of a given length.'
 }
 
+def home(request):
+    home_response = render_to_string("home.html")
+    return HttpResponse(home_response)
+
 def index(request):
-    list_items = ""
     months = list(monthly_challenges.keys())
 
-    for month in months:
-        capitalized_month = month.capitalize()
-        month_path = reverse("month-challenge", args=[month])
+    return render(request, "challenges/index.html", {
+        "months": months, 
+        })
 
-        list_items += f"<li><a href=\"{month_path}\">{capitalized_month}</a> </li>"
+    # for month in months:
+    #     capitalized_month = month.capitalize()
+    #     month_path = reverse("month-challenge", args=[month])
 
-    #"<li><a href="...">January</a></li><a href="...">February</a></li>..."
+    #     list_items += f"<li><a href=\"{month_path}\">{capitalized_month}</a> </li>"
 
-    response_data = f"<ul>{list_items}</ul>"
-    return HttpResponse(response_data)
+    # #"<li><a href="...">January</a></li><a href="...">February</a></li>..."
+
+    # response_data = f"<ul>{list_items}</ul>"
+    # return HttpResponse(response_data)
 
 def monthly_challenge(request, month):
     try:
         challenge_text = monthly_challenges[month]
-        response_data = render_to_string("challenges/challenge.html")
+        return render(request, "challenges/challenge.html",{
+            "text": challenge_text,
+            "month_name": month
+            })
+        #using the render
+        #response_data = render_to_string("challenges/challenge.html")
         #response_data = f"<h1>{challenge_text}<h1>"  #html 
-        return HttpResponse(response_data)
+        #return HttpResponse(response_data)
     except:
-        return HttpResponseNotFound("<h1>This month is not supported<h1>")
+        #raise Http404()
+        response_data = render_to_string("404.html")
+        return HttpResponseNotFound(response_data)
     
 
 
