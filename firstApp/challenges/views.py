@@ -35,17 +35,6 @@ def index(request):
         "months": months, 
         })
 
-    # for month in months:
-    #     capitalized_month = month.capitalize()
-    #     month_path = reverse("month-challenge", args=[month])
-
-    #     list_items += f"<li><a href=\"{month_path}\">{capitalized_month}</a> </li>"
-
-    # #"<li><a href="...">January</a></li><a href="...">February</a></li>..."
-
-    # response_data = f"<ul>{list_items}</ul>"
-    # return HttpResponse(response_data)
-
 def monthly_challenge(request, month):
     try:
         challenge_text = monthly_challenges[month]
@@ -53,10 +42,6 @@ def monthly_challenge(request, month):
             "text": challenge_text,
             "month_name": month
             })
-        #using the render
-        #response_data = render_to_string("challenges/challenge.html")
-        #response_data = f"<h1>{challenge_text}<h1>"  #html 
-        #return HttpResponse(response_data)
     except:
         #raise Http404()
         response_data = render_to_string("404.html")
