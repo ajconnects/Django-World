@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    My Blog
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/index.css'%}" />
+{% endblock %}
+
+{% block content %}
+    
+    <section id="Welcome">
+        <header>
+            <img src="{% static 'blog/images/aj.jpeg' %}" alt="Max'Blog" />
+            <h2> The AJ Connect Prime' BLOG</h2>
+        </header>
+        <p>Hello, I am Michael and I love to blog about the existing of Life.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2> My Latest Thoughts </h2>
+
+        <ul>
+            {% include 'blog/includes/post.html'%}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2> What I Do!</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error in quis minus quia repellendus excepturi dolor qui, asperiores accusamus officia pariatur ipsa. Nostrum quia illo fugit rerum consequuntur fuga in!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae earum praesentium autem possimus consequatur quod beatae! Inventore, eum omnis quasi iure aliquam reprehenderit illum, suscipit, nulla modi distinctio vitae?
+        </p>
+    </section>
+{% endblock %}
