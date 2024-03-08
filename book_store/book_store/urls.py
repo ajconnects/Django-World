@@ -1,5 +1,5 @@
 """
-URL configuration for firstApp project.
+URL configuration for book_store project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    #path("", views.home),  #home page
     path('admin/', admin.site.urls),
-    path("", include('challenges.urls'))
+    path("", include("storagedetails.urls"))
 ]
