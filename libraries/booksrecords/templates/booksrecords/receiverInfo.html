@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1> {{ title| title }}</h1>
+    <h3> The Receiver Fullname: {{ fullname }}</h3>
+    <h3> The Address: {{ address }}</h3>
+    <h3> The Phone Number: {{ phone }} </h3>
+    <h3> Email Address: {{ email }}</h3>
+    <hr>
+    <h2> The book has a rating of: {{ rating }}</h2>
+{% endblock %}
