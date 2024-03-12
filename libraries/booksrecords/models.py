@@ -20,8 +20,7 @@ class BooksDetails(models.Model):
     rating = models.IntegerField(default=True,
         validators = [
             MinValueValidator(1), MaxValueValidator(9)
-        ]
-    )
+        ])
     slug = models.SlugField(default="", blank=True, null=False, db_index=True)  #very importance (editable=False was remove because on the admin i use the readonly field)
 
     class Meta():
