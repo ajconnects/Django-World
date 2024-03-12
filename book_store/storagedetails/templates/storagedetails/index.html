@@ -1,4 +1,4 @@
-{% extends "storagedetails/base.html"%}
+{% extends "base.html"%}
 
 {% block title %}
     All Books
@@ -7,7 +7,7 @@
 {%block content %}
     <ul>
         {% for book in books %}
-            <li> <a href="{{ book.get_absolute_url }}"> {{ book.title}} (Rating: {{ book.rating}})</li>
+            <li> <a href="{{ book.get_absolute_url }}"> {{ book.title}} </a> (Rating: {{ book.rating}})</li>
         {% endfor %}
     </ul>
 
