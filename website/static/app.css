@@ -46,3 +46,9 @@ h3 {
   #main-navigation h1 a:active {
     color: white;
   }
+
+  @media only screen and (max-width: 768px) {
+    #main-navigation {
+      padding: 0 5%; /* Adjust padding for smaller screens */
+    }
+  }
