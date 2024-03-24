@@ -1,13 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USER REVIEW</title>
+    <title>User Review </title>
+    <link rel="stylesheet" href="{% static 'user_review/styles.css'%}">
 </head>
 <body>
    <form action="/" method="POST">
     {% csrf_token %}
+
+    {% for field in form %}
+        <div class="form-control {% if field.errors %} errors {% endif %} ">
+        {{ field.label_tag }}   
+        <!-- label_tags it use to get the label of the form -->
+        {{ field }}
+        {{ field.errors }}
+        </div>
+    {% endfor %}
+
     <!-- {% if has_error %}
         <p> This form is invalid - Please enter valid username! </p>
     {% endif %} -->
@@ -15,7 +28,12 @@
     <input type="text" id="username" name="username" ><br>
     <label for="pwd"> Password: </label>
     <input type="password" id="pwd" name="password"> <br> -->
-    {{ form }}
+
+    <!-- <div class="form-control {% if form.rating.errors %} errors {% endif %} ">
+        {{ form.rating.label_tag }}   
+        {{ form.rating }}
+        {{ form.rating.errors }}
+    </div> -->
     <button type="submit"> Send </button>
    </form>
 </body>
