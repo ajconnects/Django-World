@@ -1,25 +1,44 @@
+from typing import Any
+from django.db.models.query import QuerySet
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
+from django.views.generic.base import TemplateView
+from django.views.generic import ListView, DetailView
+from django.views.generic.edit import FormView, CreateView, UpdateView, DeleteView
+
+
 from .forms import UserReviewForm
 from .models import UserReview
 
 
 # Create your views here.
-class ReviewView(View):
-    def get(self, request):
-        form = UserReviewForm()
+# class ReviewView(View):  #using form view
+#class ReviewView(FormView): #the createview is create and view
+class ReviewView(CreateView):
+    #form_class = UserReviewForm  #you dont need a form class with by using the model
+    model = UserReview
+    form_class = UserReviewForm
+    template_name = 'user_review/review.html'  #use for get
+    success_url = '/thank-you'   #use for the post with the def form_valid function
 
-        return render(request, "user_review/review.html",{
-            'form': form
-        })
+    # def form_valid(self, form):
+    #     form.save()
+    #     return super().form_valid(form)
 
-    def post(self, request):
-        form = UserReviewForm(request.POST)
+    # def get(self, request):
+    #     form = UserReviewForm()
 
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/thank-you')
+    #     return render(request, "user_review/review.html",{
+    #         'form': form
+    #     })
+
+    # def post(self, request):
+    #     form = UserReviewForm(request.POST)
+
+    #     if form.is_valid():
+    #         form.save()
+    #         return HttpResponseRedirect('/thank-you')
 
 
 
@@ -54,8 +73,52 @@ class ReviewView(View):
 #         "form": form
 #     })
 
-def thank_you(request):
-    return render(request, "user_review/thank_you.html")
+class ThankYouView(TemplateView):
+    template_name = 'user_review/thank_you.html'
+    # def get(self, request):
+    #     return render(request, "user_review/thank_you.html")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['message'] = 'This works!'
+        return context
+
+# #function
+# def thank_you(request):
+#     return render(request, "user_review/thank_you.html")
+
+class ReviewsListView(ListView):
+    template_name = 'user_review/review_list.html'
+    model = UserReview
+    context_object_name = "reviews"
+
+    # #doing a filter on the views 
+    # def get_queryset(self):
+    #     base_query = super().get_queryset()
+    #     data = base_query.filter(rating__gt=4)
+    #     return data
+
+# #or
+# class ReviewsListView(TemplateView):
+#     template_name = 'user_review/review_list.html'
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         reviews = UserReview.objects.all()
+#         context['reviews'] = reviews
+#         return context
+
+class SingleReviewView(DetailView):
+    template_name = 'user_review/single_review.html'
+    model = UserReview
+
+    # #Using the models them on the url set the pk or this function
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     review_id = kwargs["id"]
+    #     selected_reviews = UserReview.objects.get(pk=review_id)
+    #     context['review'] = selected_reviews
+    #     return context
 
 def application(request):
     return render(request, "user_review/application.html")
