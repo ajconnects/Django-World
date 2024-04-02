@@ -1,0 +1,16 @@
+{% extends 'blog_page/base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock%}
+
+{%  block content %}
+    <h1> Welcome to our Social Website </h1>
+    <p> Welcome to blog.. </p>
+    <h3><h2><a href="{% url 'users-list' %}"> Users </a></h2></h3>
+    <h3><h2><a href="{% url 'posts-list' %}"> Posts </a></h2></h3>
+    <h2><a href="{% url 'register' %}"> Register </a></h2>
+
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends 'blog_page/base.html' %}
+{% load static %}
+
+{% block title %}
+    Delete Post
+{% endblock%}
+
+{%  block content %}
+<h1> Delete Post </h1>
+<p> Are you sure want to delete the Post?</p>
+<form method="post" action="{% url 'delete-post' username=post.user.username post_id=post.id %}">
+    {% csrf_token %}
+    <button type="submit"> Delete this Post </button>
+</form>
+<a href="{% url 'user-post' username=post.user.username %}"><button>No</button></a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'blog_page/base.html' %}
+{% load static %}
+
+{% block title %}
+    Post Details
+{% endblock%}
+
+{%  block content %}
+
+    <h1> Posted by {{ post.user.username }}</h1>
+    <hr>
+    <p> {{ post.visibility }}</p>
+    <p> {{ post.created_at}}</p>
+    <p> {{ post.post }}</p>
+
+{% endblock %}

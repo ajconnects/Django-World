@@ -1,0 +1,23 @@
+{% extends 'blog_page/base.html' %}
+{% load static %}
+
+{% block title %}
+    User Profile
+{% endblock%}
+
+{%  block content %}
+    <h2><a href="{% url 'home'%}"> Home page </a></h2>
+    <h3><h2><a href="{% url 'users-list' %}"> Users List </a></h2></h3>
+    <h1> User details </h1> 
+    <hr>
+    <p> Username: {{ user.username|title }} </p>
+    <p> Email: {{ user.email }}</p>
+    <p> Bio: {{ user.bio }}</p>
+    <p> Age: {{ user.age }}</p>
+    <a href="{% url 'user-post' username=user.username %}"> {{ user.username }} Post. </a> <br>
+    <a href="{% url 'create-post' username=user.username %}"> 
+    <button> Create new post</button></a> <br>
+    <a href="{% url 'update-user' username=user.username %}"> Update. {{ user.username }} </a> <br>
+    <a href="{% url 'delete-user' username=user.username %}"> Delete. {{ user.username }} </a>
+
+{% endblock %}

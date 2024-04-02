@@ -1,0 +1,18 @@
+{% extends 'blog_page/base.html' %}
+{% load static %}
+
+{% block title %}
+    User List
+{% endblock%}
+
+{%  block content %}
+    <h2> <a href="{% url 'home'%}"> Home Page</a></h2>
+    <h1> User List </h1>
+    <ul>
+        {% for user in users %}
+        <li>
+         <a href="{% url 'user-detail' username=user.username %}"> {{ user.username|title }}</a> joined at {{ user.joined_at }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

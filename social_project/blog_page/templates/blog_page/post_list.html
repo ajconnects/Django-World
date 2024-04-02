@@ -1,0 +1,20 @@
+{% extends 'blog_page/base.html' %}
+{% load static %}
+
+{% block title %}
+    Posts
+{% endblock%}
+
+{%  block content %}
+    <h1>Posts</h1>
+    <ul>
+        {% for post in posts %}
+        <li>
+         <a href="{% url 'post-detail' post_id=post.id %}"><li> {{ post.post }} -- {{ post.user.username }} -- {{ post.created_at}} -- {{ post.visibility }}
+        </a>
+        <a href="{% url 'update-post' username=post.user.username post_id=post.id %}"> Update Post</a>
+        <a href="{% url 'delete-post' username=post.user.username post_id=post.id %}"> Delete Post</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

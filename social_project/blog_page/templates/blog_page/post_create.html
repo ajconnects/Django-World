@@ -1,0 +1,17 @@
+{% extends 'blog_page/base.html' %}
+{% load static %}
+
+{% block title %}
+    Create Post
+{% endblock%}
+
+{%  block content %}
+
+<h1> Create new Post </h1> 
+<form method="post">
+    {% csrf_token %}
+    <p> {{ form.as_p }}</p>
+    <button type="submit"> Confirm </button>
+</form>
+
+{% endblock %}

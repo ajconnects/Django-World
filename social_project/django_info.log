@@ -1,0 +1,349 @@
+2024-03-29 09:53:41,503 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-03-29 09:54:05,471 INFO django.server "GET / HTTP/1.1" 200 595
+2024-03-29 09:54:05,498 INFO django.server "GET /static/blog_page/styles.css HTTP/1.1" 304 0
+2024-03-29 09:54:16,813 INFO django.server "GET /posts/2/ HTTP/1.1" 200 842
+2024-03-29 09:54:16,823 INFO django.server "GET /static/blog_page/styles.css HTTP/1.1" 304 0
+2024-03-29 09:54:20,282 INFO django.server "GET /posts/1/ HTTP/1.1" 200 513
+2024-03-29 09:54:25,333 INFO django.server "GET /posts/3/ HTTP/1.1" 200 945
+2024-03-29 09:54:32,600 INFO django.server "GET /posts/2/ HTTP/1.1" 200 842
+2024-03-29 09:54:47,886 INFO django.server "GET /posts/ HTTP/1.1" 200 4616
+2024-03-29 09:54:48,387 INFO django.server "GET /posts/ HTTP/1.1" 200 4616
+2024-03-29 09:54:51,738 INFO django.server "GET /posts/1/ HTTP/1.1" 200 513
+2024-03-29 09:54:59,993 INFO django.server "GET /posts/5/ HTTP/1.1" 200 944
+2024-03-29 09:55:02,806 INFO blog_page.views someone want our users list
+2024-03-29 09:55:02,825 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-03-29 09:55:04,509 INFO django.server "GET /users/Eric%20Son/ HTTP/1.1" 200 908
+2024-03-29 09:55:07,892 INFO django.server "GET /users/post/Eric%20Son/ HTTP/1.1" 200 1000
+2024-03-29 09:55:10,367 INFO django.server "GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
+2024-03-29 09:55:16,328 INFO django.server "GET /users/Eric%20Son/delete/ HTTP/1.1" 200 706
+2024-03-29 09:55:32,400 INFO django.server "GET /users/Peter%20bull/ HTTP/1.1" 200 927
+2024-03-29 09:55:39,098 INFO blog_page.views someone want our users list
+2024-03-29 09:55:39,107 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-03-29 09:55:47,201 INFO django.server "GET / HTTP/1.1" 200 595
+2024-03-29 09:55:49,136 INFO django.server "GET /posts/ HTTP/1.1" 200 4616
+2024-03-29 09:55:55,549 INFO django.server "GET /posts/ HTTP/1.1" 200 4616
+2024-03-29 09:55:55,771 INFO django.server "GET /posts/ HTTP/1.1" 200 4616
+2024-03-29 09:55:58,281 INFO django.server "GET /posts/3/ HTTP/1.1" 200 945
+2024-03-29 09:56:07,315 INFO django.server "GET /register/ HTTP/1.1" 200 1204
+2024-03-29 09:56:13,325 INFO django.server "GET /register/ HTTP/1.1" 200 1204
+2024-03-29 09:56:27,286 INFO blog_page.views someone want our users list
+2024-03-29 09:56:27,302 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-03-29 09:56:29,718 INFO django.server "GET /posts/ HTTP/1.1" 200 4616
+2024-03-29 09:56:34,402 INFO django.server "GET /posts/3/ HTTP/1.1" 200 945
+2024-03-29 09:58:33,671 INFO django.server "GET /posts/ HTTP/1.1" 200 4616
+2024-03-29 09:58:35,495 INFO django.server "GET /posts/2/ HTTP/1.1" 200 842
+2024-03-29 09:58:39,887 INFO django.server "GET /posts/4/ HTTP/1.1" 200 925
+2024-04-02 11:07:57,931 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-02 11:08:01,508 INFO django.server "GET / HTTP/1.1" 200 595
+2024-04-02 11:08:01,546 INFO django.server "GET /static/blog_page/styles.css HTTP/1.1" 304 0
+2024-04-02 11:08:01,727 WARNING django.request Not Found: /favicon.ico
+2024-04-02 11:08:01,728 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 4435
+2024-04-02 11:08:32,782 INFO django.server "GET /posts/ HTTP/1.1" 200 4616
+2024-04-02 11:08:53,933 INFO django.server "GET /posts/2/ HTTP/1.1" 200 842
+2024-04-02 11:15:08,160 INFO django.server "GET /posts/ HTTP/1.1" 200 6202
+2024-04-02 11:15:25,494 INFO django.server "GET /posts/ HTTP/1.1" 200 6202
+2024-04-02 11:15:26,798 INFO django.server "GET /users/Eric%20Son/posts/2/update/ HTTP/1.1" 200 1354
+2024-04-02 11:15:30,489 ERROR django.request Internal Server Error: /users/Eric Son/posts/2/delete/
+Traceback (most recent call last):
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete-post' with keyword arguments '{'username': '', 'post_id': 2}' not found. 1 pattern(s) tried: ['users/(?P<username>[^/]+)/posts/(?P<post_id>[0-9]+)/delete/\\Z']
+2024-04-02 11:15:30,491 ERROR django.server "GET /users/Eric%20Son/posts/2/delete/ HTTP/1.1" 500 180458
+2024-04-02 11:17:56,392 ERROR django.request Internal Server Error: /users/Eric Son/posts/2/delete/
+Traceback (most recent call last):
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user-posts' is not a valid view function or pattern name.
+2024-04-02 11:17:56,393 ERROR django.server "GET /users/Eric%20Son/posts/2/delete/ HTTP/1.1" 500 175501
+2024-04-02 11:18:06,844 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-02 11:18:10,292 INFO django.server "GET /posts/ HTTP/1.1" 200 6202
+2024-04-02 11:18:12,276 INFO django.server "GET /users/Eric%20Son/posts/2/update/ HTTP/1.1" 200 1354
+2024-04-02 11:18:14,636 ERROR django.request Internal Server Error: /users/Eric Son/posts/2/delete/
+Traceback (most recent call last):
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user-posts' is not a valid view function or pattern name.
+2024-04-02 11:18:14,638 ERROR django.server "GET /users/Eric%20Son/posts/2/delete/ HTTP/1.1" 500 175364
+2024-04-02 11:19:26,483 INFO django.server "GET /users/Eric%20Son/posts/2/delete/ HTTP/1.1" 200 752
+2024-04-02 11:19:33,595 INFO django.server "GET /users/Eric%20Son/posts/ HTTP/1.1" 200 954
+2024-04-02 11:19:39,892 INFO django.server "GET /users/Eric%20Son/posts/2/update/ HTTP/1.1" 200 1354
+2024-04-02 11:19:44,038 ERROR django.request Internal Server Error: /users/Eric Son/posts/2/update/
+Traceback (most recent call last):
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 206, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 134, in form_valid
+    return super().form_valid(form)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 63, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/http/response.py", line 618, in __init__
+    self["Location"] = iri_to_uri(redirect_to)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/encoding.py", line 138, in iri_to_uri
+    iri = str(iri)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/functional.py", line 119, in __str__
+    return str(self.__cast())
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/functional.py", line 110, in __cast
+    return func(*self._args, **self._kw)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user-posts' is not a valid view function or pattern name.
+2024-04-02 11:19:44,039 ERROR django.server "POST /users/Eric%20Son/posts/2/update/ HTTP/1.1" 500 122143
+2024-04-02 11:20:04,535 ERROR django.request Internal Server Error: /users/Eric Son/posts/2/update/
+Traceback (most recent call last):
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 206, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 134, in form_valid
+    return super().form_valid(form)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 63, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/http/response.py", line 618, in __init__
+    self["Location"] = iri_to_uri(redirect_to)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/encoding.py", line 138, in iri_to_uri
+    iri = str(iri)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/functional.py", line 119, in __str__
+    return str(self.__cast())
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/functional.py", line 110, in __cast
+    return func(*self._args, **self._kw)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user-posts' is not a valid view function or pattern name.
+2024-04-02 11:20:04,536 ERROR django.server "POST /users/Eric%20Son/posts/2/update/ HTTP/1.1" 500 122143
+2024-04-02 11:20:09,918 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-02 11:20:14,243 INFO django.server "GET /posts/ HTTP/1.1" 200 6204
+2024-04-02 11:20:16,529 INFO django.server "GET /users/Eric%20Son/posts/2/update/ HTTP/1.1" 200 1356
+2024-04-02 11:20:23,104 ERROR django.request Internal Server Error: /users/Eric Son/posts/2/update/
+Traceback (most recent call last):
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 206, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 134, in form_valid
+    return super().form_valid(form)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 63, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/http/response.py", line 618, in __init__
+    self["Location"] = iri_to_uri(redirect_to)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/encoding.py", line 138, in iri_to_uri
+    iri = str(iri)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/functional.py", line 119, in __str__
+    return str(self.__cast())
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/functional.py", line 110, in __cast
+    return func(*self._args, **self._kw)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user-posts' is not a valid view function or pattern name.
+2024-04-02 11:20:23,105 ERROR django.server "POST /users/Eric%20Son/posts/2/update/ HTTP/1.1" 500 122148
+2024-04-02 11:22:00,388 INFO django.utils.autoreload /home/dci-student/Django-World/social_project/blog_page/views.py changed, reloading.
+2024-04-02 11:22:00,829 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-02 11:22:04,094 INFO django.utils.autoreload /home/dci-student/Django-World/social_project/blog_page/views.py changed, reloading.
+2024-04-02 11:22:04,530 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-02 11:22:08,010 INFO django.server "POST /users/Eric%20Son/posts/2/update/ HTTP/1.1" 302 0
+2024-04-02 11:22:08,044 INFO django.server "GET /users/Eric%20Son/posts/ HTTP/1.1" 200 961
+2024-04-02 11:22:12,922 INFO django.server "GET /users/Eric%20Son/posts/ HTTP/1.1" 200 961
+2024-04-02 11:22:13,657 INFO django.server "GET /users/Eric%20Son/posts/2/update/ HTTP/1.1" 200 1361
+2024-04-02 11:22:18,427 INFO django.server "GET /users/Mary%20Chin/posts/3/update/ HTTP/1.1" 200 1455
+2024-04-02 11:22:23,157 INFO django.server "POST /users/Mary%20Chin/posts/3/update/ HTTP/1.1" 302 0
+2024-04-02 11:22:23,164 INFO django.server "GET /users/Mary%20Chin/posts/ HTTP/1.1" 200 1682
+2024-04-02 11:22:29,096 INFO django.server "GET /users/Mary%20Chin/posts/5/delete/ HTTP/1.1" 200 754
+2024-04-02 11:22:30,832 ERROR django.request Internal Server Error: /users/Mary Chin/posts/5/delete/
+Traceback (most recent call last):
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 258, in post
+    return self.form_valid(form)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 265, in form_valid
+    return HttpResponseRedirect(success_url)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/http/response.py", line 618, in __init__
+    self["Location"] = iri_to_uri(redirect_to)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/encoding.py", line 138, in iri_to_uri
+    iri = str(iri)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/functional.py", line 119, in __str__
+    return str(self.__cast())
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/utils/functional.py", line 110, in __cast
+    return func(*self._args, **self._kw)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/dci-student/Django-World/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user-posts' is not a valid view function or pattern name.
+2024-04-02 11:22:30,834 ERROR django.server "POST /users/Mary%20Chin/posts/5/delete/ HTTP/1.1" 500 112830
+2024-04-02 11:23:12,627 INFO django.utils.autoreload /home/dci-student/Django-World/social_project/blog_page/views.py changed, reloading.
+2024-04-02 11:23:13,180 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-02 11:23:16,495 WARNING django.request Not Found: /users/Mary Chin/posts/5/delete/
+2024-04-02 11:23:16,496 WARNING django.server "POST /users/Mary%20Chin/posts/5/delete/ HTTP/1.1" 404 4669
+2024-04-02 11:25:54,483 INFO django.server "GET /posts/ HTTP/1.1" 200 5481
+2024-04-02 11:25:56,672 INFO django.server "GET /users/Eric%20Son/posts/2/delete/ HTTP/1.1" 200 752
+2024-04-02 11:25:59,834 INFO django.server "POST /users/Eric%20Son/posts/2/delete/ HTTP/1.1" 302 0
+2024-04-02 11:25:59,847 INFO django.server "GET /users/Eric%20Son/posts/ HTTP/1.1" 200 438
+2024-04-02 11:26:12,382 INFO django.server "GET /users/Wisam%20Tom/posts/1/delete/ HTTP/1.1" 200 754
+2024-04-02 11:26:14,042 INFO django.server "POST /users/Wisam%20Tom/posts/1/delete/ HTTP/1.1" 302 0
+2024-04-02 11:26:14,070 INFO django.server "GET /users/Wisam%20Tom/posts/ HTTP/1.1" 200 1172
+2024-04-02 11:26:21,175 INFO django.server "GET /users/Wisam%20Tom/posts/ HTTP/1.1" 200 1172
+2024-04-02 11:26:28,344 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
+2024-04-02 11:26:29,516 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
+2024-04-02 11:26:30,142 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
