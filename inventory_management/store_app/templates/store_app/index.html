@@ -7,10 +7,29 @@
 
 
 {% block content %}
- <h1> Welcome Inventory Management System.</h1>
+
+  {% for message in massages %}
+  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message: </strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>
+  {% endfor %}
+
+ <h2> Welcome Inventory Management System.</h2>
+
+ {% if user.is_authenticated %}
+ <h3> Hello {{ fname }}</h3>
+ <h4> You're successfully logged in. </h4>
+ 
+ <button> <a href="{% url 'signout' %}"> Sign Out</button> </a> <br><br>
+
+ {% else %}
 
  <button> <a href="{% url 'signin' %}"> Sign In</button> </a> <br><br>
  <button> <a href="{% url 'signup' %}"> Sign Up</button> </a> <br><br>
- <button> <a href="{% url 'signout' %}"> Sign Out</button> </a> <br><br>
+ 
+ {% endif %}
 
 {% endblock %}

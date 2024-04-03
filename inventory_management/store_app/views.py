@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.core.mail import send_mail
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+
+from .models import Product, Supplier
+from .forms import ProductForm, SupplierForm
 
 # Create your views here.
 
@@ -32,10 +37,40 @@ def signup(request):
     return render(request, 'store_app/signup.html')
 
 def signin(request):
+
+    if request.method == 'POST':
+        username = request.POST['username']
+        pass1 = request.POST['pass1']
+
+        #it to check the authenticate of the user information
+        user = authenticate(username=username, password=pass1)
+
+        if user is not None:
+            login(request, user)
+            fname = user.first_name
+            return render(request, 'store_app/index.html', {
+                'fname': fname
+            })
+        
+        else:
+            messages.error(request, "Bad Credentials!")
+            return redirect('home')
+        
+
     return render(request, 'store_app/signin.html')
 
 def signout(request):
-    return render(request, 'store_app/signout.html')
+    logout(request)
+    messages.success(request, 'Logged Out Successfully')
+    return redirect('home')
+
+
+class ProductPageView(DetailView):
+    model = Product
+    content_object_name = 'product'
+    template_name = 'store_app/product_list.html'
+    slug_field = 'name'
+    slug_url_kwarg = 'name'
 
 
 
