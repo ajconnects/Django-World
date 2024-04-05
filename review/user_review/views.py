@@ -1,4 +1,3 @@
-from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -20,7 +19,7 @@ class ReviewView(CreateView):
     model = UserReview
     form_class = UserReviewForm
     template_name = 'user_review/review.html'  #use for get
-    success_url = '/thank-you'   #use for the post with the def form_valid function
+    success_url = '/thank-you'   #use for the post with the def form_valid function and by using the urls path on the success_url.
 
     # def form_valid(self, form):
     #     form.save()
