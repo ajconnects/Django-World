@@ -347,3 +347,39 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user
 2024-04-02 11:26:28,344 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
 2024-04-02 11:26:29,516 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
 2024-04-02 11:26:30,142 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
+2024-04-05 15:30:36,615 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-05 15:32:53,403 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-05 15:32:58,012 INFO django.server "GET / HTTP/1.1" 200 595
+2024-04-05 15:32:58,034 INFO django.server "GET /static/blog_page/styles.css HTTP/1.1" 304 0
+2024-04-05 15:33:13,089 INFO django.server "GET / HTTP/1.1" 200 595
+2024-04-05 15:33:13,122 INFO django.server "GET /static/blog_page/styles.css HTTP/1.1" 200 349
+2024-04-05 15:35:22,012 INFO blog_page.views someone want our users list
+2024-04-05 15:35:22,022 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-04-05 15:37:38,584 INFO blog_page.views someone want our users list
+2024-04-05 15:37:38,600 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-04-05 15:37:44,465 INFO django.server "GET /users/Eric%20Son/ HTTP/1.1" 200 908
+2024-04-07 17:14:52,872 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-07 17:15:03,283 INFO django.server "GET / HTTP/1.1" 200 595
+2024-04-07 17:15:03,293 INFO django.server "GET /static/blog_page/styles.css HTTP/1.1" 304 0
+2024-04-07 17:15:04,679 INFO django.server "GET / HTTP/1.1" 200 595
+2024-04-07 17:15:08,080 INFO blog_page.views someone want our users list
+2024-04-07 17:15:08,102 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-04-07 17:15:11,476 INFO django.server "GET /users/Eric%20Son/ HTTP/1.1" 200 908
+2024-04-07 17:15:18,152 INFO django.server "GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
+2024-04-07 17:15:23,416 INFO django.server "GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
+2024-04-07 17:15:26,810 INFO django.server "GET /users/Eric%20Son/delete/ HTTP/1.1" 200 706
+2024-04-07 17:15:31,317 INFO django.server "GET /users/Eric%20Son/posts/ HTTP/1.1" 200 438
+2024-04-07 17:15:36,167 INFO django.server "GET /users/post/Eric%20Son/ HTTP/1.1" 200 1000
+2024-04-07 17:15:47,390 INFO django.server "GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
+2024-04-07 17:16:04,291 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
+2024-04-07 17:16:06,658 INFO django.server "GET /posts/3/ HTTP/1.1" 200 949
+2024-04-07 17:16:16,549 INFO django.server "GET /users/Mary%20Chin/posts/3/update/ HTTP/1.1" 200 1459
+2024-04-07 17:16:30,325 INFO django.server "GET /users/Mary%20Chin/posts/3/update/ HTTP/1.1" 200 1459
+2024-04-07 17:17:01,169 INFO django.server "GET /posts/3/ HTTP/1.1" 200 949
+2024-04-07 17:17:18,489 INFO blog_page.views someone want our users list
+2024-04-07 17:17:18,503 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-04-07 17:17:19,695 INFO django.server "GET /users/John%20Brown/ HTTP/1.1" 200 928
+2024-04-07 17:17:24,083 INFO django.server "GET /users/John%20Brown/update/ HTTP/1.1" 200 1272
+2024-04-07 17:29:01,927 INFO blog_page.views someone want our users list
+2024-04-07 17:29:01,942 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-04-07 17:29:08,700 INFO django.server "GET /users/Peter%20bull/ HTTP/1.1" 200 927

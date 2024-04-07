@@ -347,3 +347,39 @@ Not Found: /users/Mary Chin/posts/5/delete/
 "GET /posts/ HTTP/1.1" 200 4545
 "GET /posts/ HTTP/1.1" 200 4545
 "GET /posts/ HTTP/1.1" 200 4545
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 595
+"GET /static/blog_page/styles.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 595
+"GET /static/blog_page/styles.css HTTP/1.1" 200 349
+someone want our users list
+"GET /users/ HTTP/1.1" 200 1230
+someone want our users list
+"GET /users/ HTTP/1.1" 200 1230
+"GET /users/Eric%20Son/ HTTP/1.1" 200 908
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 595
+"GET /static/blog_page/styles.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 595
+someone want our users list
+"GET /users/ HTTP/1.1" 200 1230
+"GET /users/Eric%20Son/ HTTP/1.1" 200 908
+"GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
+"GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
+"GET /users/Eric%20Son/delete/ HTTP/1.1" 200 706
+"GET /users/Eric%20Son/posts/ HTTP/1.1" 200 438
+"GET /users/post/Eric%20Son/ HTTP/1.1" 200 1000
+"GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
+"GET /posts/ HTTP/1.1" 200 4545
+"GET /posts/3/ HTTP/1.1" 200 949
+"GET /users/Mary%20Chin/posts/3/update/ HTTP/1.1" 200 1459
+"GET /users/Mary%20Chin/posts/3/update/ HTTP/1.1" 200 1459
+"GET /posts/3/ HTTP/1.1" 200 949
+someone want our users list
+"GET /users/ HTTP/1.1" 200 1230
+"GET /users/John%20Brown/ HTTP/1.1" 200 928
+"GET /users/John%20Brown/update/ HTTP/1.1" 200 1272
+someone want our users list
+"GET /users/ HTTP/1.1" 200 1230
+"GET /users/Peter%20bull/ HTTP/1.1" 200 927
