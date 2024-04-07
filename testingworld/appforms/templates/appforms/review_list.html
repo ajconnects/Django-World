@@ -1,0 +1,32 @@
+{% extends 'appforms/base.html' %}
+
+{% block title %}
+    All list Reviews
+{% endblock %}
+
+{% block content %}
+    <h1> The list of Applications </h1>
+    <table>
+        <tr>
+            <th> ID: </th>
+            <th> Job Position: </th>
+            <th> Company: </th>
+            <th> Email: </th>
+            <th> Phone Number: </th>
+            <th> Application Date: </th>
+            <th> Company Rating: </th>
+        </tr>
+        {% for users in user_apps %}
+        <tr>
+            <td> <a href="{% url 'single-app' users.id %}"> {{ users.id }} </a> </td>
+            <td> {{ users.job_title }}</td>
+            <td> {{ users.company }}</td>
+            <td> {{ users.email }}</td>
+            <td> {{ users.phone }}</td>
+            <td> {{ users.date }}</td>
+            <td> {{ users.rating }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

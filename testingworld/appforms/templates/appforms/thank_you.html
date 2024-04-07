@@ -1,0 +1,13 @@
+{% extends 'appforms/base.html' %}
+
+{% block title %}
+    Thank You
+{% endblock %}
+
+{% block content %}
+
+    <h1> Thank you for filling the form </h1>
+    {{ message }} <br> <br>
+    <a href="{% url 'home' %}"> Click to Fill the From!</a>
+
+{% endblock %}

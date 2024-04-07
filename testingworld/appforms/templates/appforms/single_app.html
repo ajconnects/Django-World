@@ -1,0 +1,14 @@
+{% extends 'appforms/base.html' %}
+
+{% block title %}
+   Check Forms
+{% endblock %}
+
+{% block content %}
+    <h1> Check Application</h1>
+    <h3> {{ user_app.job_title|title }} </h3>
+    <h3> {{ user_app.company }}</h3>
+    <h3> {{ user_app.email }}</h3>
+    <h3> {{ user_app.date }}</h3>
+
+{% endblock %}
