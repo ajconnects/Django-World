@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Supplier 
+{% endblock %}
+
+
+{% block content %}
+    <a href="{% url 'home' %}">Home</a>
+    <h1>  Add New Supplier </h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> Confirm Supplier </button>
+    </form>
+{% endblock %}

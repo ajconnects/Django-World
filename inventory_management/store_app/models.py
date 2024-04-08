@@ -18,7 +18,7 @@ class Supplier(models.Model):
         db_table = 'Supplier'
 
     def __str__(self) -> str:
-        return f'Name: {self.username} '
+        return self.username
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
@@ -32,4 +32,4 @@ class Product(models.Model):
 
 
     def __str__(self) -> str:
-        return f'Product{self.name}. and Price {self.price}'
+        return f'Product: {self.name}. and Price {self.price}'

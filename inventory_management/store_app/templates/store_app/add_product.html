@@ -7,10 +7,11 @@
 
 
 {% block content %}
-    <h1> Product List </h1>
+    <a href="{% url 'home' %}">Home</a>
+    <h1>  Add Product List </h1>
     <form action="" method="post">
         {% csrf_token %}
-        {{% form.as_p %}}
-        <button type="submit"> Submit Order</button>
+        {{ form.as_p }}
+        <button type="submit"> Confirm Product </button>
     </form>
 {% endblock %}
