@@ -10,7 +10,7 @@
     <h1> Delete Products. </h1>
     <h3> Are you sure want to delete the Product: {{ product.name }}! </h3>
     <h4> Click Yes to Continues. </h4>
-    <form action="{% url 'delete-product' username=product.name %}" method="post">
+    <form action="{% url 'delete-product' name=product.name %}" method="post">
         {% csrf_token %}
         <button type="submit"> Yes </button>
     </form> <br>
