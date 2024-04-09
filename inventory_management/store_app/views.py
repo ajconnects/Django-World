@@ -57,7 +57,7 @@ def signin(request):
         if user is not None:
             login(request, user)
             fname = user.first_name
-            return render(request, 'store_app/index.html', {
+            return render(request, 'store_app/signin.html', {
                 'fname': fname
             })
         
@@ -67,6 +67,19 @@ def signin(request):
         
 
     return render(request, 'store_app/signin.html')
+
+def user_page(request):
+    if request.method == 'POST':
+        user = request.POST['username']
+        pass1 = request.POST['pass1']
+
+        user = authenticate(username=user, password=pass1)
+
+        if user is not None:
+            login(request, user)
+            return redirect('user-page')
+        
+    return render(request, 'store_app/user_page.html')
 
 def signout(request):
     logout(request)
