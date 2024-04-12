@@ -4,9 +4,9 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 def store_file(file):
-    with open("temp/image.jpg", "wb+") as img_file:
-        for chunk in file.chunks():
-            img_file.write(chunk)
+    with open("temp/image.jpg", "wb+") as dest:
+        for chunk in file.chunks():  #the chunks is from django(uploadedfile.read)
+            dest.write(chunk)
 
 
 class CreateProfileView(View):
