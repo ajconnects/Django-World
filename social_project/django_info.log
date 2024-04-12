@@ -383,3 +383,14 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user
 2024-04-07 17:29:01,927 INFO blog_page.views someone want our users list
 2024-04-07 17:29:01,942 INFO django.server "GET /users/ HTTP/1.1" 200 1230
 2024-04-07 17:29:08,700 INFO django.server "GET /users/Peter%20bull/ HTTP/1.1" 200 927
+2024-04-07 20:12:23,567 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-04-07 20:12:34,053 INFO django.server "GET / HTTP/1.1" 200 595
+2024-04-07 20:12:35,128 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
+2024-04-07 20:12:37,400 INFO django.server "GET /users/Mary%20Chin/posts/3/update/ HTTP/1.1" 200 1459
+2024-04-07 20:12:44,285 INFO django.server "GET /users/Wisam%20Tom/posts/8/delete/ HTTP/1.1" 200 754
+2024-04-07 20:13:01,281 INFO blog_page.views someone want our users list
+2024-04-07 20:13:01,289 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-04-07 20:13:02,653 INFO django.server "GET /users/Eric%20Son/ HTTP/1.1" 200 908
+2024-04-07 20:13:04,278 INFO django.server "GET /users/Eric%20Son/delete/ HTTP/1.1" 200 706
+2024-04-07 20:13:11,638 INFO django.server "GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
+2024-04-07 20:13:14,591 INFO django.server "GET /users/Eric%20Son/delete/ HTTP/1.1" 200 706

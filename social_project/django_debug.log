@@ -383,3 +383,14 @@ someone want our users list
 someone want our users list
 "GET /users/ HTTP/1.1" 200 1230
 "GET /users/Peter%20bull/ HTTP/1.1" 200 927
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 595
+"GET /posts/ HTTP/1.1" 200 4545
+"GET /users/Mary%20Chin/posts/3/update/ HTTP/1.1" 200 1459
+"GET /users/Wisam%20Tom/posts/8/delete/ HTTP/1.1" 200 754
+someone want our users list
+"GET /users/ HTTP/1.1" 200 1230
+"GET /users/Eric%20Son/ HTTP/1.1" 200 908
+"GET /users/Eric%20Son/delete/ HTTP/1.1" 200 706
+"GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
+"GET /users/Eric%20Son/delete/ HTTP/1.1" 200 706
