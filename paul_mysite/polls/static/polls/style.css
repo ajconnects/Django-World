@@ -1,0 +1,12 @@
+
+li a {
+    color: rgb(196, 199, 211);
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+body {
+    background: rgb(44, 47, 56) url('images/bbb.jpeg') no-repeat;
+}
