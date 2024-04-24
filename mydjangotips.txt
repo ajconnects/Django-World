@@ -1,0 +1,7 @@
+Django link on the Django Documentations
+
+Validators----------------  https://docs.djangoproject.com/en/5.0/ref/validators/
+https://docs.djangoproject.com/en/5.0/ref/forms/validation/
+
+
+forms field--------  https://docs.djangoproject.com/en/5.0/ref/forms/fields/

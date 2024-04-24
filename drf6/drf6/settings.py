@@ -76,9 +76,17 @@ WSGI_APPLICATION = "drf6.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    # "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }
+    "default" : {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": "database2",
+            "USER": "postgres",
+            "PASSWORD": "123456789",
+            "HOST": "database-2.cfkqwwgk8pww.us-east-1.rds.amazonaws.com",
+            "PORT": "5432",
     }
 }
 
