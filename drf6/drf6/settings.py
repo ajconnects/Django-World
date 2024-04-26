@@ -80,13 +80,32 @@ DATABASES = {
     #     "ENGINE": "django.db.backends.sqlite3",
     #     "NAME": BASE_DIR / "db.sqlite3",
     # }
-    "default" : {
-            "ENGINE": "django.db.backends.postgresql_psycopg2",
-            "NAME": "database2",
-            "USER": "postgres",
-            "PASSWORD": "123456789",
-            "HOST": "database-2.cfkqwwgk8pww.us-east-1.rds.amazonaws.com",
-            "PORT": "5432",
+    # my own database from aws
+    # "default" : {
+    #         "ENGINE": "django.db.backends.postgresql_psycopg2",
+    #         "NAME": "database2",
+    #         "USER": "postgres",
+    #         "PASSWORD": "123456789",
+    #         "HOST": "database-2.cfkqwwgk8pww.us-east-1.rds.amazonaws.com",
+    #         "PORT": "5432",
+    # }
+    #paul database
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql_psycopg2",
+    #     "NAME": "db1",
+    #     "USER": "postgres",
+    #     "PASSWORD": "1234567890",
+    #     "HOST": "db1.cfgayqgyqtj2.eu-central-1.rds.amazonaws.com",
+    #     "PORT": "5432",
+    # }
+    # database 2
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "db1",
+        "USER": "postgres",
+        "PASSWORD": "123456789",
+        "HOST": "db1.choaiwm8ghgu.eu-central-1.rds.amazonaws.com",
+        "PORT": "5432",
     }
 }
 
