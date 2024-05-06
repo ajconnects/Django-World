@@ -394,3 +394,17 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user
 2024-04-07 20:13:04,278 INFO django.server "GET /users/Eric%20Son/delete/ HTTP/1.1" 200 706
 2024-04-07 20:13:11,638 INFO django.server "GET /users/Eric%20Son/update/ HTTP/1.1" 200 1266
 2024-04-07 20:13:14,591 INFO django.server "GET /users/Eric%20Son/delete/ HTTP/1.1" 200 706
+2024-05-06 20:52:51,272 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-05-06 20:52:53,599 INFO django.server "GET / HTTP/1.1" 200 595
+2024-05-06 20:52:53,628 INFO django.server "GET /static/blog_page/styles.css HTTP/1.1" 200 349
+2024-05-06 20:52:59,113 INFO blog_page.views someone want our users list
+2024-05-06 20:52:59,135 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-05-06 20:53:00,553 INFO django.server "GET /users/John%20Brown/ HTTP/1.1" 200 928
+2024-05-06 20:53:03,017 INFO django.server "GET /users/Wisam%20Tom/ HTTP/1.1" 200 915
+2024-05-06 20:58:40,819 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-05-06 20:58:45,607 INFO django.server "GET / HTTP/1.1" 200 595
+2024-05-06 20:58:47,053 INFO blog_page.views someone want our users list
+2024-05-06 20:58:47,085 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-05-06 20:58:48,523 INFO django.server "GET /users/Mary%20Chin/ HTTP/1.1" 200 914
+2024-05-06 20:58:50,063 INFO django.server "GET / HTTP/1.1" 200 595
+2024-05-06 20:58:51,329 INFO django.server "GET /register/ HTTP/1.1" 200 1204

@@ -11,16 +11,19 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+file_env = BASE_DIR / ".env"
+dotenv.read_dotenv(file_env)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-iqy91m(+iks@z!v&qy$gse91s=)#p9*+82)%rum+h$xo6@w7qh'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -168,11 +171,11 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'django_debug.log'),  # Update the path as needed
-        }        
-        
+        }
+
     },
     'loggers':{
-        
+
         'django':{
             'handlers':['file_info','file_warning','file_debug','console'],
             'level':'INFO',
@@ -181,9 +184,9 @@ LOGGING = {
         'blog_page.views':{
            'handlers':['file_info','file_warning','file_debug','console'],
             'level':'INFO',
-            'propagate':True  
+            'propagate':True
         }
-        
-    }    
-    
+
+    }
+
 }
