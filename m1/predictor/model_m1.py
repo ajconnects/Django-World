@@ -1,5 +1,7 @@
 
 from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 
 
@@ -19,7 +21,9 @@ def train_marks_model():
     X = np.array([[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [20]])
     y = np.array([2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 5])
 
-    model = LinearRegression()
+    #model = LinearRegression()
+    #model = DecisionTreeRegressor()
+    model = RandomForestRegressor()
     model.fit(X, y)
     return model
 
