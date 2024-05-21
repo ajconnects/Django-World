@@ -408,3 +408,26 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'user-posts' not found. 'user
 2024-05-06 20:58:48,523 INFO django.server "GET /users/Mary%20Chin/ HTTP/1.1" 200 914
 2024-05-06 20:58:50,063 INFO django.server "GET / HTTP/1.1" 200 595
 2024-05-06 20:58:51,329 INFO django.server "GET /register/ HTTP/1.1" 200 1204
+2024-05-07 17:44:38,320 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-05-07 17:44:41,804 INFO django.server "GET / HTTP/1.1" 200 595
+2024-05-07 17:44:44,426 INFO blog_page.views someone want our users list
+2024-05-07 17:44:44,451 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-05-09 10:12:07,568 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-05-09 10:12:11,392 INFO django.server "GET / HTTP/1.1" 200 595
+2024-05-09 10:12:17,935 INFO blog_page.views someone want our users list
+2024-05-09 10:12:17,958 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-05-09 10:12:21,357 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
+2024-05-09 10:12:27,673 INFO django.server "GET /register/ HTTP/1.1" 200 1204
+2024-05-09 10:12:33,887 INFO blog_page.views someone want our users list
+2024-05-09 10:12:33,893 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-05-09 10:12:36,682 INFO django.server "GET /posts/ HTTP/1.1" 200 4545
+2024-05-09 10:14:37,428 INFO django.server "GET /register/ HTTP/1.1" 200 1204
+2024-05-09 10:15:05,926 INFO blog_page.views someone want our users list
+2024-05-09 10:15:05,940 INFO django.server "GET /users/ HTTP/1.1" 200 1230
+2024-05-09 10:15:07,450 INFO django.server "GET /users/Wisam%20Tom/ HTTP/1.1" 200 915
+2024-05-09 10:15:09,472 INFO django.server "GET /users/post/Wisam%20Tom/ HTTP/1.1" 200 1000
+2024-05-15 10:22:07,196 INFO django.utils.autoreload Watching for file changes with StatReloader
+2024-05-15 10:22:13,753 INFO django.server "GET / HTTP/1.1" 200 595
+2024-05-15 10:22:13,782 INFO django.server "GET /static/blog_page/styles.css HTTP/1.1" 304 0
+2024-05-15 10:22:24,225 INFO django.server "GET / HTTP/1.1" 200 595
+2024-05-15 10:22:24,268 INFO django.server "GET /static/blog_page/styles.css HTTP/1.1" 200 349
